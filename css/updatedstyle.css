@@ -1,0 +1,180 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+body {
+    background-color: bisque;
+    height: 100vh;
+    width: 100vw;
+    transition: all 0.5s ease-in;
+}
+.disclaimer {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+/*slideshow*/
+.one {
+    height: 100vh;
+}
+.title {
+    margin-top: 1rem;
+    padding-left: 282px;
+    padding-right: 282px;
+}
+.slideshow-container {
+    display: grid;
+    width: 100%;
+    min-height: calc(100vh - 4.5rem);
+    place-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+#slideshow {
+    position: relative;
+    max-width: 980px;
+    height: 500px;
+}
+#slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.75s ease-in-out;
+}
+#slideshow img.active {
+    opacity: 1;
+}
+button {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.6s ease;
+    background-color: rgba(94, 90, 90, 0.671);
+}
+button:hover {
+    background-color: rgba(123, 255, 0, 0.6);
+}
+button#prev {
+    left: -.009rem;
+}
+button#next {
+    right: -.009rem;
+}
+/*light/dark toggle*/
+.dark-mode {
+    background-color: rgb(41, 38, 38);
+    color: white;
+    transition: all 0.4s ease-in;
+}
+.toggle-container {
+    position: sticky;
+    top: 0;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.75rem;
+    margin-bottom: 0.63rem;
+    margin-inline: auto;
+}
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(201, 195, 195);
+    transition: all 0.4s ease-in;
+    border-radius: 2.13rem;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.23rem;
+    width: 1.23rem;
+    left: 0.25rem;
+    bottom: 0.25rem;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: rgba(123, 255, 0, 1);
+}
+input:focus + .slider {
+    box-shadow: 0 0 2px rgba(123, 255, 0, 1);
+}
+input:checked + .slider:before {
+    transform: translateX(1.25rem)
+}
+/*weather app*/
+.two {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.location, .temperature {
+    height: 30vh;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.temperature {
+    flex-direction: column;
+}
+.temperature-description {
+    font-size: 20px;
+}
+.degree-section {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.degree-section span {
+    margin: 12px;
+    font-size: 30px;
+}
+.degree-section h3 {
+    font-size: 50px;
+}
+.time {
+    font-size: 20px;
+}
+@media screen and (max-width: 480px) {
+    .title {
+        padding: 0;
+    }
+    #slideshow {
+        max-width: 90vw;
+        height: 300px;
+    }
+    button:hover {
+        background-color: rgba(94, 90, 90, 0.671);
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to my landing page! Come see what I can do for you!">
+  <link rel="icon" type="image/x-icon" href="media/favicon.png">
+  <link rel="stylesheet" href="css/updatedstyle.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <title> Jordan Anderson's Website </title>
+</head>
+<body>
+<!--start nav-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Home Page</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Products</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!--end nav-->
+<!--dark/light toggle-->
+  <div class="toggle-container">
+    <label class="toggle-switch">
+      <input type="checkbox" id="mode-toggle">
+      <span class="slider"></span>
+    </label>
+    <p class="mode-status"> Light </p>
+  </div>
+  <div class="disclaimer">
+    <h1> This page is still a work in progress.</h1>
+  </div>
+<!--slideshow-->
+<section class="one">
+  <div class="slideshow-container">
+    <div class="project-heading">
+      <h3 class="title">Click the buttons to change the image!</h3>
+    </div>
+    <div id="slideshow">
+      <img src="media/beachturtles.jpg" alt="turtles on a beach.">
+      <img src="media/octopus.jpg" alt="octopus">
+      <img src="media/seaturtle.webp" alt="sea turtle under water">
+      <img src="media/starfish.jpg" alt="starfish">
+      <button id="prev"> &#10094; </button>
+      <button id="next"> &#10095; </button>
+    </div>
+  </div>
+</section>
+<!--end slideshow-->
+<!--Weather app-->
+<section class="two">
+  <div class="location">
+    <h3 class="location-timezone"> Timezone</h3>
+    <div class="time">
+      <span id="hours"> 00 </span>
+      <span> : </span>
+      <span id="minutes"> 00 </span>
+      <span> : </span>
+      <span id="seconds"> 00 </span>
+      <span id="am-pm"> AM </span>
+    </div>
+  </div>
+  <div class="temperature">
+    <div class="degree-section">
+      <h3 class="temperature-degree"> 32 </h3>
+      <span>F</span>
+    </div>
+    <div class="temperature-description">It's starting to get cold outside!</div>
+  </div>
+</section>
+<script src="js/weather.js"></script>
+<script src="js/darkmode.js"></script>      
+<script src="js/slider.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

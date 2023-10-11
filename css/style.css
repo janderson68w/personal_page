@@ -1,0 +1,133 @@
+*, *::before, *::after{
+  font-family: 'Times New Roman', Times, serif;
+  /*box-sizing: border-box;*/
+}
+body {
+  background-image: url("../media/R.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.header {
+  grid-area: header;
+  text-align: center;
+  background-color: #a0fc00;
+}
+.nav {
+  grid-area: nav;
+  display: flex;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 1rem 1rem;
+  text-align: center;
+}
+li a {
+  text-decoration: none;
+  display: block;
+  padding: 0px 5px;
+  border: 1px solid #a0fc00;
+  border-radius: 5px;
+  color: #a0fc00;
+  background-color: black;
+}
+li a:hover {
+  background-color: #c67217;
+  animation: hover 0.5s forwards;
+}
+@keyframes hover{
+  from{ background-color: black; }
+  to{ background-color: #c67217; }
+  0%{ transform: scale(1);}
+  100%{ transform: scale(1.1);}
+}
+.main {
+  grid-area: main;
+  text-indent: 1rem;
+  background-color: transparent;
+  color: white;
+  padding: 1rem;
+}
+.main a {
+  color: #a0fc00;
+  text-decoration: none;
+  animation: link 1s forwards;
+}
+h2 {
+  text-align: center;
+}
+img {
+  float: right;
+  padding-left: 1rem;
+}
+.aside {
+  grid-area: aside;
+  padding: 1rem;
+  /*background-color: black;*/
+  color: white;
+}
+.input{
+  outline: none;
+}
+.input:focus{
+  border: 2px solid #a0fc00;
+  transition: ease-in-out 0.25s;
+}
+.save{
+  border-radius: 5px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.input{
+  border-radius: 5px;
+}
+.footer {
+  grid-area: footer;
+  display: flex;
+  align-content: flex-start;
+  background-color: #a0fc00;
+}
+.grid {
+  display: grid;
+  grid-template-areas:
+    "header header header header header"
+    "nav main main main aside"
+    "nav main main main aside"
+    "footer footer footer footer footer";
+  grid-column-gap: 1rem;
+  /*background-color: black;*/
+  padding: 0;
+  margin: 0;
+}
+@media screen and (max-width: 635px) {
+  body{
+    height: fit-content;
+  }
+  .grid{
+    grid-template-areas: 
+      "header header"
+      "nav nav"
+      "main main"
+      "aside aside"
+      "footer footer";
+  }
+  li{
+    float: left;
+  }
+  li a{
+    display: block;
+  }
+  li a:hover{
+    animation: none;
+  }
+  .nav{
+    justify-self: center;
+  }
+  .main{
+    overflow: scroll;
+  }
+  .aside{
+    justify-self: center;
+  }
+}
