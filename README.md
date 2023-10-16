@@ -1,3 +1,3 @@
-# project-5
+# personal page
 
-I really have no idea what I'm doing with pull requests and merge
+personal page is currently a work in progress and will have alot of changes as I learn new things.
