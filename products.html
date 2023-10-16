@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Check these amazing websites!">
   <link rel="icon" type="image/x-icon" href="media/favicon.png">
-  <link rel="stylesheet" href="css/construction.css">
+  <link rel="stylesheet" href="css/projects.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <title> Jordan Anderson - Products </title>
+  <title> Jordan Anderson - Projects </title>
 </head>
 <body>
+<!--Start Nav-->
   <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Home Page</a>
@@ -29,13 +30,52 @@
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="products.html">Products</a>
+            <a class="nav-link active" aria-current="page" href="products.html">Projects</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <p> Products link check </p>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<!--End Nav-->
+<!--Light/Dark toggle-->
+  <div class="toggle-container">
+    <label class="toggle-switch">
+      <input type="checkbox" id="mode-toggle">
+      <span class="slider"></span>
+    </label>
+    <p class="mode-status"> Light </p>
+  </div>
+<!--projects section-->
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <h1 class="title">Check out these quick projects!</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card h-100" id="cardId">
+          <img src="media/to-do-list.png" class="card-img-top" alt="Picture of a To-Do list project">
+          <div class="card-body">
+            <p class="card-title"> To-Do list </p>
+            <p class="card-text"> In this quick and simple project I have created a to-do list that allows you to add whatever items you need to do and cross them off as they are completed! You can also add or remove items from the list whenever you need to! </p>
+            <a href="https://github.com/janderson68w/to-do-list" class="btn btn-primary"> Access on GitHub </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card h-100" id="cardId2">
+          <img src="media/trivia-game.png" class="card-img-top" alt="Picture of Trivia Game project">
+          <div class="card-body">
+            <p class="card-title"> Trivia Game </p>
+            <p class="card-text"> This is a trivia game that was created using HTML, CSS, JSON, and Javascript where random questions are accessed from the internal database. Each correct answer allows you to earn points and at the end tells you where you rank against the previous contestants! </p>
+            <a href="https://github.com/janderson68w/trivia-game" class="btn btn-primary"> Access on GitHub </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="js/darkmode.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>

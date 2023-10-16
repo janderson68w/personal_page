@@ -1,0 +1,85 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+body {
+    background-color: bisque;
+    height: 100vh;
+    width: 100vw;
+    transition: all 0.5s ease-in;
+}
+.dark-mode {
+    background-color: rgb(41, 38, 38);
+    color: white;
+    transition: all 0.4s ease-in;
+}
+.toggle-container {
+    position: sticky;
+    top: 0;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.75rem;
+    margin-bottom: 0.63rem;
+    margin-inline: auto;
+}
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(201, 195, 195);
+    transition: all 0.4s ease-in;
+    border-radius: 2.13rem;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.23rem;
+    width: 1.23rem;
+    left: 0.25rem;
+    bottom: 0.25rem;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: rgba(123, 255, 0, 1);
+}
+input:focus + .slider {
+    box-shadow: 0 0 2px rgba(123, 255, 0, 1);
+}
+input:checked + .slider:before {
+    transform: translateX(1.25rem)
+}
+.card {
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 6px 6px 15px 12px rgb(75, 74, 74);
+}
+.cardcolor {
+    transition: 0.6s;
+    background-color: rgba(123, 255, 0, 1)!important;
+}
+.card-title {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgb(75, 74, 74);
+}
+.card-text {
+    font-size: large;
+}
+.title {
+    padding-bottom: 15px;
+}
