@@ -166,6 +166,19 @@ input:checked + .slider:before {
 .time {
     font-size: 20px;
 }
+/*observer slide in*/
+.item {
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+.left {
+    transform-origin: left-center;
+    transform: translateX(-50%);
+}
+.slide-in {
+    opacity: 1 !important;
+    transform: translateX(0);
+}
 @media screen and (max-width: 480px) {
     .title {
         padding: 0;
