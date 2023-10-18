@@ -1,6 +1,6 @@
 *, *::before, *::after{
   font-family: 'Times New Roman', Times, serif;
-  /*box-sizing: border-box;*/
+  box-sizing: border-box;
 }
 body {
   background-image: url("../media/R.jpg");
@@ -13,29 +13,6 @@ body {
   grid-area: header;
   text-align: center;
   background-color: #a0fc00;
-}
-.nav {
-  grid-area: nav;
-  display: flex;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 1rem 1rem;
-  text-align: center;
-}
-li a {
-  text-decoration: none;
-  display: block;
-  padding: 0px 5px;
-  border: 1px solid #a0fc00;
-  border-radius: 5px;
-  color: #a0fc00;
-  background-color: black;
-}
-li a:hover {
-  background-color: #c67217;
-  animation: hover 0.5s forwards;
 }
 @keyframes hover{
   from{ background-color: black; }
