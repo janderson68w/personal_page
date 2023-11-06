@@ -179,6 +179,20 @@ input:checked + .slider:before {
     opacity: 1 !important;
     transform: translateX(0);
 }
+.footer {
+    display: flex;
+    background-color: rgba(123, 255, 0, 1);
+    height: 25vh;
+    align-items: center;
+}
+.footer img {
+    border-radius: 10px;
+    margin: 0 .5rem;
+    box-shadow: 3px 3px 10px 6px rgb(80, 78, 78);
+}
+.flex-container {
+    display: block;
+}
 @media screen and (max-width: 480px) {
     .title {
         padding: 0;
